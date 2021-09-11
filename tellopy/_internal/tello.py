@@ -97,6 +97,7 @@ class Tello(object):
         self.sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
         if NetCard is None:
             pass
+        
         else:
             self.sock.setsockopt(socket.SOL_SOCKET, 25, NetCard.encode())
         self.sock.bind(('', self.port))
